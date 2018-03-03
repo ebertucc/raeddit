@@ -9,7 +9,7 @@
 # By default, this script will install the reddit code in the current user's
 # home directory and all of its dependencies (including libraries and database
 # servers) at the system level. The installed reddit will expect to be visited
-# on the domain "reddit.local" unless specified otherwise.  Configuring name
+# on the domain "raeddit.com" unless specified otherwise.  Configuring name
 # resolution for the domain is expected to be done outside the installed
 # environment (e.g. in your host machine's /etc/hosts file) and is not
 # something this script handles.

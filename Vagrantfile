@@ -29,9 +29,9 @@
 # You can then ssh into it with `vagrant ssh`.
 #
 # avahi-daemon is installed on the guest VM so you can access your local install
-# at https://reddit.local. If that fails you'll need to update your host
+# at https://raeddit.com. If that fails you'll need to update your host
 # machine's hosts file (/etc/hosts) to include the line:
-# 192.168.56.111 reddit.local
+# 192.168.56.111 raeddit.com
 #
 # If you want to create additional vagrant boxes you can copy this file
 # elsewhere, but be sure to update `code_share_host_path` to be the absolute
@@ -58,7 +58,7 @@ overlay_upper = "/home/#{vagrant_user}/.overlay"
 guest_ip = "192.168.56.111"
 guest_mem = "4096"
 guest_swap = "4096"
-hostname = "reddit.local"
+hostname = "raeddit.com"
 
 
 Vagrant.configure(2) do |config|
@@ -128,7 +128,7 @@ Vagrant.configure(2) do |config|
   #    $ vagrant up
   # [though 'vagrant up default' will also work, the 'default' is redudnant]
   # Once built, avahi-daemon should guarantee the instance will be accessible
-  # from https://reddit.local/
+  # from https://raeddit.com/
   config.vm.define "default", primary: true do |redditlocal|
       redditlocal.vm.hostname = hostname
       # host-only network interface

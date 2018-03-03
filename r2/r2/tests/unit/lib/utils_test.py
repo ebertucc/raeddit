@@ -373,7 +373,7 @@ class UtilsTest(unittest.TestCase):
             'beta')
 
         self.assertEquals(
-            utils.extract_subdomain('beta.reddit.local:8000', 'reddit.local'),
+            utils.extract_subdomain('beta.raeddit.com:8000', 'raeddit.com'),
             'beta')
 
         self.assertEquals(
@@ -496,7 +496,7 @@ class TestUrlToThing(unittest.TestCase):
         with patch('r2.models.Subreddit') as MockSubreddit:
             MockSubreddit._by_name.return_value = s.Subreddit
             self.assertEqual(
-                utils.url_to_thing('http://reddit.local/r/pics'),
+                utils.url_to_thing('http://raeddit.com/r/pics'),
                 s.Subreddit,
             )
 
@@ -504,12 +504,12 @@ class TestUrlToThing(unittest.TestCase):
         with patch('r2.models.Subreddit') as MockSubreddit:
             MockSubreddit._by_name.return_value = s.Subreddit
             self.assertEqual(
-                utils.url_to_thing('http://reddit.local/r/pics/'),
+                utils.url_to_thing('http://raeddit.com/r/pics/'),
                 s.Subreddit,
             )
 
     def test_frontpage(self):
         self.assertEqual(
-            utils.url_to_thing('http://reddit.local/'),
+            utils.url_to_thing('http://raeddit.com/'),
             None,
         )
